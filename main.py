@@ -44,8 +44,6 @@ def main():
         else:
             raise NameError("Processo não encontrado!")
 
-        sleep(1)
-        print("[*] Rodando...")
         sleep(0.5)
         print(f"[*] Life: [OK]")
         sleep(0.5)
@@ -53,6 +51,7 @@ def main():
         sleep(0.5)
         print(f"[*] Stamina: [OK]")
         sleep(0.5)
+        print("[*] Rodando...")
         while True:
             life()
             energy()
