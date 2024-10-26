@@ -23,25 +23,40 @@ def getPointer(base, offsets):
 
 
 def life():
-   return pm.write_float(getPointer(module + endereco, offset ),100.0)
+   return pm.write_float(getPointer(module + endereco, offsetLife ),100.0)
+
+def energy():
+    return pm.write_float(getPointer(module + endereco, offsetEnergy),100.0)
+
+def stamina():
+    return pm.write_float(getPointer(module + endereco, offsetStamina),100.0)
+
 
 def main():
     system("cls")
     print(layout())
-
+    end = hex(module).replace("0","")
     try:
         print("[*] Iniciando...")
         sleep(1)
         if 'module' in globals():
-            print(f"[*] Processo {module} encontrado!")
+            print(f"[*] Processo 0{end} encontrado!")
         else:
             raise NameError("Processo não encontrado!")
 
         sleep(1)
         print("[*] Rodando...")
+        sleep(0.5)
+        print(f"[*] Life: [OK]")
+        sleep(0.5)
+        print(f"[*] Energy: [OK]")
+        sleep(0.5)
+        print(f"[*] Stamina: [OK]")
+        sleep(0.5)
         while True:
             life()
-
+            energy()
+            stamina()
     except Exception as e:
         print(f"[*] Erro: {e}")
 
