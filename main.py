@@ -73,7 +73,6 @@ def main():
                 stamina()
                 # Exibe uma mensagem de sucesso na mesma linha
                 print("\r[*] Injetado com sucesso!", end="")
-                sleep(0.5)  # Pausa para evitar sobrecarga de CPU
             except Exception as e:
                 # Se ocorrer um erro (ex.: processo encerrado), atualiza a interface
                 system("cls")  # Limpa a tela
