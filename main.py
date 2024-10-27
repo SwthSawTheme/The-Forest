@@ -55,7 +55,7 @@ def main():
 
     # Início das operações principais após encontrar o processo
     try:
-        print("[*] Iniciando...")  # Indica o início das operações
+        print("[*] Iniciando...")  
         sleep(1)
         print("[*] Life: [OK]")  # Confirma que a função `life()` está pronta
         sleep(0.5)
@@ -82,7 +82,7 @@ def main():
                 print("[*] Energy: [OK]")  # Reexibe status de energia
                 print("[*] Stamina: [OK]")  # Reexibe status de stamina
                 print("[*] Injetando...")  # Indica tentativa de reinjeção
-                sleep(3)  # Aguarda 3 segundos antes de tentar novamente
+                sleep(3)  
     except Exception as e:
         # Captura erros fora do loop principal e exibe a mensagem de erro
         print(f"[*] Erro: {e}")
